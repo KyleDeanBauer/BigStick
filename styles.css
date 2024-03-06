@@ -1,0 +1,109 @@
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #070202ef;
+  }
+
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('bs.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-size: 2em;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #game-area {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #stick-man {
+    width: 5px; 
+    height: 50px; 
+    background-color: rgba(212, 174, 6, 0.692);
+    position: absolute;
+    top: 225px; /* Centered vertically */
+    left: 245px; /* Centered horizontally */
+    transform-origin: 50% 100%; /* Ensures rotation around the bottom of the stick man */
+  }
+  
+  .enemy {
+    position: absolute;
+    width: 5px; 
+    height: 15px;
+    background-color: rgba(6, 101, 165, 0.459);    
+  }
+
+  .special-enemy {
+    width: 40px; 
+    height: 40px; 
+    background-image: url('goblin.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    position: absolute;
+  }
+
+  .boss-enemy{
+    width: 20px; 
+    height: 105px; 
+    background-image: url('bigStick.png'); 
+    background-size: cover; 
+    background-position: center; 
+    position: absolute;
+  }
+
+  .game-title-image {
+    width: 800px; 
+    height: 120px; 
+    margin-top: 5px;
+  }
+
+  #stick-length-display {
+    background-color: rgba(231, 0, 0, 0.589);
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+
+  #left-arrow {
+    width: 150px;
+    height: 75px;
+    margin-top: 15px;
+  }
+
+  #right-arrow {
+    width: 150px;
+    height: 75px;
+    margin-top: 4px;
+  }
+
+  #collision-counter {
+    color: darkred;
+  }
+
+  @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .game-over-flash, #game-text {
+    animation: flash 1s infinite; 
+  }
+
+/* Bauer,Kyle & CHATGPT4 */
